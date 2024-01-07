@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thanks Page</title>
+    <link rel="stylesheet" href="hope.css">
+</head>
+<body bgcolor="lightblue">
+<center>
+    <form id='yolo' action="/yolo" method="GET" onsubmit="return text()"> 
+        <label for="yolo">name:</label><br>
+        <input type="text" id="yolo" name="idk" value=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        function text() {
+            var nameValue = document.getElementById("yolo").value;
+    
+            if (nameValue === "") {
+                alert("Please fill out the name field");
+                return false; // Prevent form submission
+            }
+    
+            // Store the name in local storage
+            localStorage.setItem("name", nameValue);
+    
+            // If all fields are filled, allow form submission
+            return true;
+        }
+    </script>
+    
+</center>
+</body>
+</html>

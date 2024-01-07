@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Page</title>
+</head>
+<body bgcolor="red">
+    <center>
+        <h1 id="display-name"></h1>
+        <h2>more updates coming</h2>
+    </center>
+
+    <script>
+        window.onload = function() {
+            // Retrieve the parameter from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var nameParam = urlParams.get("idk");
+
+            // Check if the name parameter is present
+            if (nameParam) {
+                document.getElementById("display-name").innerText = "Welcome, " + nameParam + "!";
+            }
+        };
+    </script>
+    
+</body>
+</html>
